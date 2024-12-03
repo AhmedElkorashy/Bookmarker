@@ -12,8 +12,8 @@ var inputSearch = document.getElementById("search");
 //
 
 // button flags to activate or deactivate the submit button
-/*var nameStatus = false;
-var urlStatus = false;*/
+var nameStatus = false;
+var urlStatus = false;
 var currentIndex;
 var arrayList = [];
 if (localStorage.getItem("website") !== null) {
@@ -28,24 +28,24 @@ function addWebsite() {
     };
     if (validationName() && ValidationURL()) {
       // anotherModel.classList.remove("modal-content");
-      staticBackdrop.classList.add("d-none");
 
       arrayList.push(websiteObject);
       pushingToLocalStorage();
       display();
       clearInputValues();
 
-      // submitButton.disabled = true;
-      // nameStatus = false;
-      // urlStatus = false;
+      submitButton.setAttribute("data-bs-toggle", "modal"); 
+      submitButton.setAttribute("data-bs-target", "#staticBackdrop"); 
+      nameStatus = false;
+      urlStatus = false;
+      toggleButton();
+      staticBackdrop.classList.add("d-none");
     } else {
-      // anotherModel.classList.add("modal-content");
-
+    
       staticBackdrop.classList.remove("d-none");
     }
   } else {
-    // anotherModel.classList.add("modal-content");
-
+    
     staticBackdrop.classList.remove("d-none");
   }
 }
@@ -152,15 +152,15 @@ function validationName() {
     inputName.nextElementSibling.classList.add("d-none");
     inputName.classList.remove("is-invalid");
     inputName.classList.add("is-valid");
-    // nameStatus = true;
-    // toggleButton();
+    nameStatus = true;
+    toggleButton();
     return true;
   } else {
     inputName.nextElementSibling.classList.remove("d-none");
     inputName.classList.add("is-invalid");
     inputName.classList.remove("is-valid");
-    // nameStatus = false;
-    // toggleButton();
+    nameStatus = false;
+    toggleButton();
     return false;
   }
 }
@@ -173,23 +173,25 @@ function ValidationURL() {
 
     inputURL.classList.remove("is-invalid");
     inputURL.classList.add("is-valid");
-    // urlStatus = true;
-    // toggleButton();
+    urlStatus = true;
+    toggleButton();
     return true;
   } else {
     inputURL.nextElementSibling.classList.remove("d-none");
     inputURL.classList.remove("is-valid");
     inputURL.classList.add("is-invalid");
-    // urlStatus = false;
-    // toggleButton();
+    urlStatus = false;
+    toggleButton();
     return false;
   }
 }
 // this function is to toggle the activate of the submit button
 function toggleButton() {
   if (nameStatus == true && urlStatus == true) {
-    submitButton.disabled = false;
+    submitButton.removeAttribute("data-bs-toggle");
+    submitButton.removeAttribute("data-bs-target");
   } else {
-    submitButton.disabled = true;
+    submitButton.setAttribute("data-bs-toggle", "modal"); 
+    submitButton.setAttribute("data-bs-target", "#staticBackdrop"); 
   }
 }

@@ -1,0 +1,117 @@
+body {
+  background-color: #f7ecde;
+}
+h1 {
+  position: relative;
+  font-weight: 500;
+  font-size: 3.125rem;
+  line-height: 3.75rem;
+  font-family: pacifico;
+  width: fit-content;
+  margin: auto;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: #fec260;
+    transition: all 0.35s;
+    z-index: -5;
+  }
+  &:hover::after {
+    height: 50%;
+  }
+}
+.my-border {
+  border-width: 2px 0 2px 0;
+  border-style: dotted;
+  border-color: #352e28;
+}
+.my-style {
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  color: transparent;
+  h2 {
+    font-family: "Righteous";
+    font-weight: 500;
+    font-size: 1.5625rem;
+    line-height: 1.875rem;
+  }
+  i {
+    font-weight: 900;
+    font-size: 1.5625rem;
+    line-height: 1.5625rem;
+    transform: translateY(-3px);
+  }
+  .left-icon {
+    color: #3ca55c;
+  }
+  .right-icon {
+    color: #b5ac49;
+  }
+}
+/* *********************************************************/
+/* ***********************input*************************** */
+/* *********************************************************/
+
+.form-control:focus {
+  color: #212529;
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+input::placeholder {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: capitalize;
+}
+
+.my-button {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #ff0000;
+  --bs-btn-border-color: #ff0000;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #ff0000;
+  --bs-btn-hover-border-color: #ff0000;
+}
+/* .btn {
+  --bs-btn-color: #212529;
+} */
+.btn-visit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #9eb23b;
+  --bs-btn-border-color: #9eb23b;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #8a9e23;
+  --bs-btn-hover-border-color: #6e8018;
+}
+.btn-remove {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #ff0000;
+  --bs-btn-border-color: #ff0000;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #ff0000;
+  --bs-btn-hover-border-color: #ff0000;
+}
+.text-black {
+  color: #000000;
+}
+/*  */
+
+.modal-dialog-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@font-face {
+  font-family: pacifico;
+  src: url(../fonts/Pacifico-Regular.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Righteous;
+  font-family: 500;
+  src: url(../fonts/Righteous-Regular.ttf);
+}

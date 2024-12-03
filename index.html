@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="./images/images.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="py-5">
+        <div class="container">
+            <div class="mb-5 pb-3">
+                <h1 class=" text-center py-2 ">Bookmarker</h1>
+            </div>
+            <div class="my-border mb-4">
+
+                <div class="d-flex justify-content-center align-items-center  my-style pt-5 text-nowrap">
+                    <i class="fa-solid fa-bookmark left-icon"></i>
+                    <h2>Bookmark your favorite sites</h2>
+                    <i class="fa-solid fa-bookmark right-icon"></i>
+                </div>
+                <section class="the-main-body px-4 mt-5">
+                    <div class="input-name">
+                        <label for="inputName" class="d-block fw-semibold">
+                            <i class="fa-solid fa-book-bookmark pe-2"></i>
+                            Site Name
+                        </label>
+                        <input type="text" id="inputName" class="form-control mt-2 " oninput="validationName()"
+                            placeholder="Bookmark Name">
+                        <div class="alert alert-danger text-capitalize p-1 mt-2 d-none">
+                            <small class="p-2"> the website name must be at least 3 characters</small>
+                        </div>
+
+                    </div>
+                    <div class="input-url mt-3">
+                        <label for="inputURL" class="d-block fw-semibold">
+                            <i class="fa-solid fa-link pe-2"></i> Site URL
+                        </label>
+                        <input type="url" id="inputURL" class="form-control mt-2 " placeholder="Website URL"
+                            oninput="ValidationURL()">
+                        <div class="alert alert-danger text-capitalize p-1 mt-2 d-none">
+                            <small class="p-2"> the website URL must contain https:// or http://</small>
+                        </div>
+                    </div>
+                    <!-- the button -->
+                    <div class="d-flex justify-content-center my-5 ">
+                        <button class="btn my-button  text-capitalize px-5 " id="submitButton" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            submit</button>
+                    </div>
+                    <input type="text" id="search" placeholder="Search By Name...."
+                        class="form-control mb-5 w-75 mx-auto" oninput="searchFunction()">
+                </section>
+            </div>
+            <section class="table-responsive">
+                <table class="table text-center bg-light  pt-4">
+                    <thead>
+                        <tr>
+                            <th class="text-capitalize">index</th>
+                            <th class="text-capitalize text-nowrap">Website Name</th>
+                            <th class="text-capitalize">Visit</th>
+                            <th class="text-capitalize">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        
+
+        <!-- <div
+            class=" box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center" >
+            <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+                <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="ms-0 modal-title fs-5 d-flex align-items-center" id="staticBackdropLabel">
+                        <span class="me-2">🔴🟠🟢</span>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </header>
+                <p class="m-0 pb-2">
+                    Site Name or Url is not valid, Please follow the rules below :
+                </p>
+                <ol class="rules list-unstyled m-0">
+                    <li>
+                        <i class="fa-regular fa-circle-right p-2"></i>Site name must
+                        contain at least 3 characters
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+                        valid one
+                    </li>
+                </ol>
+            </div>
+        </div> -->
+
+        <!-- Modal -->
+        <!-- Modal -->
+        <div class="modal fade d-none " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" id="anotherModel">
+                    <div class="modal-header d-flex align-items-center border-0">
+                        <h1 class="ms-0 modal-title fs-5 d-flex align-items-center" id="staticBackdropLabel">
+                            <span class="me-2">🔴🟠🟢</span>
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4 rounded-2 text-start">
+                        <p class="m-0 pb-2 px-0  text-start h5">Site Name or Url is not valid, Please follow the
+                            rules below :</p>
+                        <ol class="rules list-unstyled m-0 fw-semibold">
+                            <li class="mr-0 px-0">
+                                <i class="fa-regular fa-circle-right p-2" style="color:#ff0000"></i>Site name must
+                                contain at least 3 characters
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-circle-right p-2" style="color:#ff0000"></i>Site URL must be
+                                a valid one
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--  -->
+
+
+        <!-- Modal -->
+
+     
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -34,18 +34,29 @@ function addWebsite() {
       display();
       clearInputValues();
 
+<<<<<<< HEAD
       submitButton.setAttribute("data-bs-toggle", "modal"); 
       submitButton.setAttribute("data-bs-target", "#staticBackdrop"); 
+=======
+      submitButton.setAttribute("data-bs-toggle", "modal");
+      submitButton.setAttribute("data-bs-target", "#staticBackdrop");
+>>>>>>> 295529142494bda861cc60f6858afd57ea67bafa
       nameStatus = false;
       urlStatus = false;
       toggleButton();
       staticBackdrop.classList.add("d-none");
     } else {
+<<<<<<< HEAD
     
       staticBackdrop.classList.remove("d-none");
     }
   } else {
     
+=======
+      staticBackdrop.classList.remove("d-none");
+    }
+  } else {
+>>>>>>> 295529142494bda861cc60f6858afd57ea67bafa
     staticBackdrop.classList.remove("d-none");
   }
 }
@@ -110,7 +121,7 @@ function searchFunction() {
     tableBody.innerHTML = cartona;
   } else {
     tableBody.innerHTML = `<tr class="text-center text-capitalize">
-                             <td colspan="4" class="font-weight-bold">This website doesn't exist.</td>
+                             <td colspan="4" class="fw-bold">This website doesn't exist.</td>
                            </tr>`;
   }
 }
@@ -191,7 +202,7 @@ function toggleButton() {
     submitButton.removeAttribute("data-bs-toggle");
     submitButton.removeAttribute("data-bs-target");
   } else {
-    submitButton.setAttribute("data-bs-toggle", "modal"); 
-    submitButton.setAttribute("data-bs-target", "#staticBackdrop"); 
+    submitButton.setAttribute("data-bs-toggle", "modal");
+    submitButton.setAttribute("data-bs-target", "#staticBackdrop");
   }
 }

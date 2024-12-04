@@ -51,7 +51,7 @@ function display() {
   var cartona = "";
   if (arrayList.length == 0) {
     cartona = `<tr class="text-center text-capitalize">
-                  <td colspan="4" class="font-weight-bold">there is no websites.</td>
+                  <td colspan="4" class="fw-bold">there is no websites.</td>
                 </tr>`;
   } else {
     for (var i = 0; i < arrayList.length; i++) {

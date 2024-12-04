@@ -108,7 +108,7 @@ function searchFunction() {
     tableBody.innerHTML = cartona;
   } else {
     tableBody.innerHTML = `<tr class="text-center text-capitalize">
-                             <td colspan="4" class="font-weight-bold">This website doesn't exist.</td>
+                             <td colspan="4" class="fw-bold">This website doesn't exist.</td>
                            </tr>`;
   }
 }

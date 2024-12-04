@@ -34,8 +34,8 @@ function addWebsite() {
       display();
       clearInputValues();
 
-      submitButton.setAttribute("data-bs-toggle", "modal");
-      submitButton.setAttribute("data-bs-target", "#staticBackdrop");
+      // submitButton.setAttribute("data-bs-toggle", "modal");
+      // submitButton.setAttribute("data-bs-target", "#staticBackdrop");
       nameStatus = false;
       urlStatus = false;
       toggleButton();

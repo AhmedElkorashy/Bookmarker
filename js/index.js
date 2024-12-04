@@ -110,7 +110,7 @@ function searchFunction() {
     tableBody.innerHTML = `<tr class="text-center text-capitalize">
                              <td colspan="4" class="fw-bold">This website doesn't exist.</td>
                            </tr>`;
-    //  this line for displaying that there isn no websites here
+    //  this line in case he removed the the last element from the table
     if (arrayList.length == 0) {
       display();
     }

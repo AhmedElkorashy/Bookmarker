@@ -34,29 +34,16 @@ function addWebsite() {
       display();
       clearInputValues();
 
-<<<<<<< HEAD
-      submitButton.setAttribute("data-bs-toggle", "modal"); 
-      submitButton.setAttribute("data-bs-target", "#staticBackdrop"); 
-=======
       submitButton.setAttribute("data-bs-toggle", "modal");
       submitButton.setAttribute("data-bs-target", "#staticBackdrop");
->>>>>>> 295529142494bda861cc60f6858afd57ea67bafa
       nameStatus = false;
       urlStatus = false;
       toggleButton();
       staticBackdrop.classList.add("d-none");
     } else {
-<<<<<<< HEAD
-    
       staticBackdrop.classList.remove("d-none");
     }
   } else {
-    
-=======
-      staticBackdrop.classList.remove("d-none");
-    }
-  } else {
->>>>>>> 295529142494bda861cc60f6858afd57ea67bafa
     staticBackdrop.classList.remove("d-none");
   }
 }

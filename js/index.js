@@ -89,6 +89,7 @@ function pushingToLocalStorage() {
 function clearInputValues() {
   inputName.value = "";
   inputURL.value = "";
+  clearValidation();
 }
 
 function searchFunction() {
@@ -196,4 +197,9 @@ function toggleButton() {
     submitButton.setAttribute("data-bs-toggle", "modal");
     submitButton.setAttribute("data-bs-target", "#staticBackdrop");
   }
+}
+
+function clearValidation() {
+  inputName.classList.remove("is-valid");
+  inputURL.classList.remove("is-valid");
 }

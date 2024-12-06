@@ -199,6 +199,7 @@ function toggleButton() {
   }
 }
 
+//clearing validation again
 function clearValidation() {
   inputName.classList.remove("is-valid");
   inputURL.classList.remove("is-valid");
